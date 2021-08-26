@@ -1,0 +1,11 @@
+body {
+    background-color: purple;
+}
+
+.container {
+    background-color: pink;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 7px;
+}

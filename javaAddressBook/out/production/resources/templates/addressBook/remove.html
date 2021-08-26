@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <div th:replace="fragments/style"></div>
+</head>
+<body>
+<div th:replace="fragments/navbar"></div>
+<div class="container">
+
+    <h3>This address has now been deleted!</h3>
+
+
+    <a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a>
+    <a th:href="@{/queries/new}"><button class="btn btn-primary">Enter a new address</button></a>
+
+</div>
+<div th:replace="fragments/body"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+</script>
+
+</body>
+</html>

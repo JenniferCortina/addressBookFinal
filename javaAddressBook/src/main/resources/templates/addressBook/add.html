@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+
+    <div th:replace="fragments/style"></div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+</head>
+<body>
+<div th:replace="fragments/navbar"></div>
+
+<div class="container">
+    <p>Query an address using this form </p>
+    <form action="#" th:action="@{/addressbook}" th:object="${addressBook}" method="post">
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="First Name..." th:field="*{firstName}">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name..." th:field="*{lastName}">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address.." th:field="*{address}">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Phone Number..." th:field="*{phoneNumber}">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email Address..." th:field="*{emailAddress}">
+        </div>
+
+        <button class="btn btn-primary">Search!</button>
+
+
+    </form>
+</div>
+
+<div th:replace="fragments/body"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
